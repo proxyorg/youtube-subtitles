@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Custom Subtitles",
+  "version": "1.0",
+  "description": "Upload custom subtitles for YouTube videos.",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon.png"
+  }
+}
